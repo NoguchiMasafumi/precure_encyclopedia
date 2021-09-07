@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+		<link href="css/p_cur.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.css" />
+		<script type="text/javascript" src="js/jquery-ui-1.12.1.js"></script>
+
+
+
+
+		<title>プリキュアだいずかん</title>
+		<script>
+var int_ver=293*0.4;
+
+var int_hor=396*0.4;
+
+
+var ar_img_pos_ver=[];
+var ar_img_pos_hor=[];
+var int_chk1=0;
+var int_chk2=0;
+
+for(var int_loop1=0;int_loop1<55;int_loop1++){
+
+ar_img_pos_ver.push(int_chk2*int_ver)
+ar_img_pos_hor.push(int_chk1*int_hor)
+
+
+	if(int_chk1==3){
+		int_chk1=0;
+		int_chk2=int_chk2+1;
+	}else{
+		int_chk1=int_chk1+1
+	}
+	
+}
+
+			//var ar_img_pos_ver=[0,0,0,0,293,293,293,293,586,586,586,586,879,879,879,879,1172,1172,1172,1172,1465,1465,1465,1465,1758,1758,1758,1758,2051,2051,2051,2051,2344,2344,2344,2344,2637,2637,2637,2637,2930,2930,2930,2930,3223,3223,3223,3223,3516,3516,3516,3516,3809,3809,3809];
+			//var ar_img_pos_hor=[0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792,1188,0,396,792];
+			var ar_pc_name=["キュアブラック","キュアホワイト","シャイニールミナス","キュアブルーム","キュアイーグレット","キュアドリーム","キュアルージュ","キュアレモネード","キュアミント","キュアアクア","ミルキィローズ","キュアピーチ","キュアベリー","キュアパイン","キュアパッション","キュアブロッサム","キュアマリン","キュアサンシャイン","キュアムーンライト","キュアメロディ","キュアリズム","キュアビート","キュアミューズ","キュアハッピー","キュアサニー","キュアピース","キュアマーチ","キュアビューティ","キュアハート","キュアダイヤモンド","キュアロゼッタ","キュアソード","キュアエース","キュアラブリー","キュアプリンセス","キュアハニー","キュアフォーチュン","キュアフローラ","キュアマーメイド","キュアトゥインクル","キュアスカーレット","キュアミラクル","キュアマジカル","キュアフェリーチェ","キュアホイップ","キュアジェラート","キュアカスタード","キュアマカロン","キュアショコラ","キュアパルフェ","キュアエール","キュアアンジュ","キュアエトワール","キュアマシェリ","キュアアムール"];
+			var ar_kan_name=["美墨なぎさ","雪城ほのか","九条ひかり","日向咲","美翔舞","夢原のぞみ","夏木りん","春日野うらら","秋元こまち","水無月かれん","美々野くるみ","桃園ラブ","蒼乃美希","山吹祈里","東せつな","花咲つぼみ","来海えりか","明堂院いつき","月影ゆり","北条響","南野奏","黒川エレン","調辺アコ","星空みゆき","日野あかね","黄瀬やよい","緑川なお","青木れいか","相田マナ","菱川六花","四葉ありす","剣崎真琴","円亜久里","愛乃めぐみ","白雪ひめ","大森ゆうこ","氷川いおな","春野はるか","海藤みなみ","天ノ川きらら","紅城トワ","朝日奈みらい","十六夜リコ","花海ことは"];
+			var ar_real_name=["みすみ　なぎさ","ゆきしろ　ほのか","くじょう　ひかり","ひゅうが　さき","みしょう　まい","ゆめはら　のぞみ","なつき　りん","かすがの　うらら","あきもと　こまち","みなずき　かれん","みみの　くるみ","ももぞの　らぶ","あおの　みき","やまぶき　いのり","ひがし　せつな","はなさき　つぼみ","くるみ　えりか","みょうどういん　いつき","つきかげ　ゆり","ほうじょう　ひびき","みなみの　かなで","くろかわ　えれん","しらべ　あこ","ほしぞら　みゆき","ひの　あかね","きせ　やよい","みどりかわ　なお","あおき　れいか","あいだ　まな","ひしかわ　りっか","よつば　ありす","けんざき　まこと","まどか　あぐり","あいの　めぐみ","しらゆき　ひめ","おおもり　ゆうこ","ひかわ　いおな","はるの　はるか","かいどう　みなみ","あまのがわ　きらら","あかぎ　とわ","あさひな　みらい","いざよい　りこ","はなみ　ことは","うさみ　いちか","ありすがわ　ひまり","たてがみ　あおい","ことづめ　ゆかり","けんじょう　あきら","きらぼし　しえる/きらりん","のの　はな","やくしじ　さあや","かがやき　ほまれ","あいざき　えみる","るーるー・あむーる"];
+			var ar_explanation1=[1,1,3,3,3,4,4,4,4,4,4,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,9,10,10,10,10,10,11,12,12,12,12,12,12,12,13,13,13,14,14,14,14,14,14,15,15,15,15,15];
+			var ar_explanation2=[2,2,,,,5,5,5,5,5,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,];
+
+
+var ar_title=["ふたりはプリキュア","ふたりはプリキュア Max Heart","ふたりはプリキュア Splash Star","Yes！プリキュア5","Yes！プリキュア5GoGo！","フレッシュプリキュア！","ハートキャッチプリキュア！","スイートプリキュア♪","スマイルプリキュア！","ドキドキ！プリキュア","ハピネスチャージプリキュア！","Go！プリンセスプリキュア","魔法つかいプリキュア！","キラキラ☆プリキュアアラモード","HUGっと！プリキュア"];
+
+var ar_explanation=[
+"記念すべき「プリキュア」シリーズ第1作目、『ふたりはプリキュア』。「虹の園」（地球）に住む主人公たちが、「光の園」から奪われたプリズムストーンを取り戻すため、伝説の戦士・プリキュア変身し悪の勢力・ドツクゾーンに挑む物語です。",
+"前作の直接的な続編として制作され、ドツクゾーンとの戦い後が描かれ、3匹の妖精たちが眠りにつき、ごく普通の生活を送るなぎさとほのかは中学3年生に進級します。",
+"第3作目、『ふたりはプリキュア Splash Star』。幼い頃「大空の樹」で妖精を見た2人の少女が、同じ場所で偶然再会した時に妖精と出会い、滅びの力で世界を滅ぼそうとする悪の組織・アクダイカーンに立ち向かいます。",
+"シリーズ第4作目。ある日、図書館で不思議な本「ドリームコレット」と”パルム国の王子”の妖精ココと出会った、主人公・夢原のぞみ。ココを助けるため、幼なじみの夏木りんらと共に、悪の集団ナイトメアの野望に立ち向かいます。",
+"前作『Yes！プリキュア5』の続編として、第5作目、『Yes！プリキュア5GoGo！』。ナイトメアの消滅後、平和な生活を送っていた5人の元に「運び屋」を名乗る少年・シロップが現れ、一通の手紙を手渡されました。",
+"『フレッシュプリキュア！』は、シリーズの第6作目です。主人公・桃園ラブは、人気ダンスユニットのライブを見に行った際、全世界の支配を企む”管理国家ラビリンス”の陰謀に巻き込まれてしまいます",
+"”花”を世界観のモチーフとして制作された、第7作目『ハートキャッチプリキュア！』。主人公・花咲つぼみは、夢で見た妖精シプレとコフレとの出会いで変身、仲間と共に”砂漠の使徒”との戦いを繰り広げます。",
+"”音楽”をテーマに制作された、シリーズ第8作目『スイートプリキュア』今作では人間模様の描写が複雑になっており、シリーズを通して描かれている、”友情の大切さ”がより強調されています",
+"”笑顔”と”明るい未来”がテーマの今作は、絵本好きの主人公・星空みゆきが、絵本から飛び出してきた妖精キャンディと出会うことから始まります。",
+"「愛」と「愛から生まれるドキドキ！」をキーワードに、他人に対する献身、博愛の心が持つ力を描く作品です。",
+"本シリーズの10周年記念作品です。”各大陸にチームが存在”しており、その活躍がワールドニュースで流されるなど、これまでにはない挑戦的要素が多く盛り込まれました。",
+"女の子の憧れ”プリンセス”をキーワードに制作・放送された、第12作目『Go！プリンセスプリキュア』。新生活に胸を膨らませていた主人公・春のはるかは、学園の森を散策中に”ホープキングダム”からやって来た妖精、アロマ＆パフ兄妹と出会います。",
+"”魔法使い”をコンセプトに「手をつなぐ」というテーマで生まれたシリーズ第13作目、『魔法つかいプリキュア！』。ナシマホウ界（人間界）と魔法界、異なる世界の少女が手を繋ぐことで奇跡が起こり、2つの世界を舞台にファンタジー溢れる物語が幕を開けました。",
+"-",
+"-"
+];
+
+
+			$(function(){
+				$(".show1").click(function(){
+					//alert($(this).attr("id"))
+					$("#panel1").hide("slow")
+					var int_select=$(this).attr("id").replace("pc","")-1
+					$(".face").css("background-position","-"+(ar_img_pos_hor[int_select]/0.4)+"px -"+(ar_img_pos_ver[int_select]/0.4)+"px")
+					$("#pc_name").text(ar_pc_name[int_select])
+					$("#real_name").text(ar_real_name[int_select])
+					//$("#hira_name").text(ar_hira_name[int_select])
+					//$("#hira_url").attr("href","https://www.google.co.jp/search?q="+ar_hira_name[int_select])
+
+
+					$("#title").text(ar_title[ar_explanation1[int_select]-1])
+					$("#explanation").text(ar_explanation[ar_explanation1[int_select]-1])
+					$("#logo").attr("src","img/"+ar_explanation1[int_select]+".png")
+					$("#panel2").show(1500)
+				})
+
+
+				$(".back1").click(function(){
+					$("#panel2").hide("slow")
+					$("#panel1").show("slow")
+				})
+
+				//**************** ここでcssを自動生成する ****************
+				var style = '';
+				for(var int_loop2=0;int_loop2<ar_img_pos_ver.length;int_loop2++){
+					style += "#pc"+(int_loop2+1)+"{background-position:-"+ar_img_pos_hor[int_loop2]+"px -"+ar_img_pos_ver[int_loop2]+"px;}";
+				}
+				$('style').append(style);
+
+			});
+		</script>
+        <style></style>
+	</head>
+
+
+
+	<body class="mar_a0 fnt_s12 fnt_styl fnt_c02" style=" background:url(img/_r2_c2.png) no-repeat; position:relative">
+
+		<!-- ********************** タイトル ********************** -->
+		<div style="width:100%;height:600px;background: rgba(255,255,255,0.95);">
+			<div class="bg_c00 h50 bor_b_s_sld bor_b_w4 bor_c05 pad_t30 mar_b60 shd2_9">
+			<div class="w960 mar_l_at mar_r_at fnt_s48 lhg_100p">
+				<img src="img/_r2_c2.png" width="40" height="40" class="mar_r15 mar_l15"/>
+	            	<script>document.write($("title").html());</script>
+            	<img src="img/_r2_c2.png" width="40" height="40" class="mar_r15 mar_l15"/>
+            </div>
+		</div>
+
+
+		<!-- ********************** 選択部分 ********************** -->
+		<div id="panel1" class="w960 mar_r_at mar_l_at">
+			<div class="mar_b30 fnt_s24">みたいプリキュアをクリックしてね。　　<a href="none.html">ぜんぶみたいときはここをクリック</a> <a href="history.html">歴史</a></div>
+			<!-- ********************** ここでデータがある分丸いアイコンを追加していきます ********************** -->
+			<script>
+				for(var int_loop1=0;int_loop1<ar_img_pos_ver.length;int_loop1++){
+					document.write("<div id=\"pc"+(int_loop1+1)+"\" class=\"face2 show1\" title=\""+ar_pc_name[int_loop1]+"\">a</div>")	
+				}
+            </script>
+            <div class="clearfix">&nbsp;</div>
+		</div>
+
+
+		<!-- ********************** 個別表示部分 ********************** -->
+		<div id="panel2" class="disp_no w960 mar_r_at mar_l_at">
+            <div class="back1 fnt_s36 cur_poi mar_b30" id=""><img src="img/back.png" class="bor_a_w0 ver_mid">もどる</div>
+            <div class="w392 h292 face flt_lef mar_r30 shd8_9"></div>
+            <div class="flt_lef">
+
+                <div class="w530">
+                    <div class="flt_lef">
+                        <span class="fnt_s36" id="pc_name"></span><br />
+                        <span class="fnt_s24" id="real_name"></span><br />
+
+                        
+
+                    </div>
+
+                    <img src="img/_r2_c2.png" class="flt_rig" id="logo"/>
+
+                    <div class="clearfix">&nbsp;</div>
+
+			<div id="title" class="fnt_s24 mar_t50"></div>
+        	        <p id="explanation" class="fnt_s14">
+                	</p>
+
+                </div>
+
+
+
+            </div>
+		</div>
+<div class="clearfix">&nbsp;</div>
+		<!-- ********************** /個別表示部分 ********************** -->
+
+	
+
+		<footer class="w100p mar_r_at mar_l_at tex_cen mar_t100 mar_b120 fnt_c02"><script>document.write($("title").html());</script></footer>
+	</body>
+
+
+</html>
